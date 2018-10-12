@@ -24,46 +24,84 @@ function play(val) {
     }
 }
 
+var doA = document.getElementById("do");
+var reA = document.getElementById("re");
+var miA = document.getElementById("mi");
+var faA = document.getElementById("fa");
+var soA = document.getElementById("so");
+var laA = document.getElementById("la");
+var siA = document.getElementById("si");
+
+var playingA = null;
+
 function playDo() {
     console.log('do');
-    var audio = document.getElementById('do');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    doA.play();
+    playingA = doA;
 }
 
 function playRe() {
     console.log('re');
-    var audio = document.getElementById('re');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    reA.play();
+    playingA = reA;
 }
 
 function playMi() {
     console.log('mi');
-    var audio = document.getElementById('mi');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    miA.play();
+    playingA = miA;
 }
 
 function playFa() {
     console.log('fa');
-    var audio = document.getElementById('fa');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    faA.play();
+    playingA = faA;
 }
 
 function playSo() {
     console.log('so');
-    var audio = document.getElementById('so');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    soA.play();
+    playingA = soA;
 }
 
 function playLa() {
     console.log('la');
-    var audio = document.getElementById('la');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    laA.play();
+    playingA = laA;
 }
 
 function playSi() {
     console.log('si');
-    var audio = document.getElementById('si');
-    audio.play();
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
+    }
+    siA.play();
+    playingA = siA;
 }
 
 function playDoh() {

@@ -17,21 +17,21 @@ function keyDownHandler(e) {
     console.log('press at ' + key);
     switch(key) {
     case 65:
-	playDo(); break;
+	playDo(); canvasOnHit(1); break;
     case 83:
-	playRe(); break;
+	playRe(); canvasOnHit(2); break;
     case 68:
-	playMi(); break;
+	playMi(); canvasOnHit(3); break;
     case 70:
-	playFa(); break;
+	playFa(); canvasOnHit(4); break;
     case 74:
-	playSo(); break;
+	playSo(); canvasOnHit(5); break;
     case 75:
-	playLa(); break;
+	playLa(); canvasOnHit(6); break;
     case 76:
-	playSi(); break;
+	playSi(); canvasOnHit(7); break;
     case 186:
-	playDoh(); break;
+	playDoh(); canvasOnHit(8); break;
     }
 }
 

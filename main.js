@@ -40,6 +40,8 @@ var canvas = function() {
     var dict = {};
     var t1 = template1();
     dict['jumpingVol'] = new Template(t1.toneHit, t1.enable, t1.close);
+    var t2 = template2();
+    dict['scrollingVol'] = new Template(t2.toneHit, t2.enable, t2.close);
     dict['other'] = new Template(function(){}, function(){}, function(){});
 
     var _s = document.getElementById('select');

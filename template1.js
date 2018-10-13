@@ -6,9 +6,16 @@ var Color = {
 blue: 'rgb(0,0,255)'
 };
 
-function getMusicData() {
-    return musicData;
-}
+var templateConfig = {
+rWidth: 30,
+rHeightMultiple: 10,
+wGap: 10
+};
+
+var templatePosition = {
+startX: 10,
+startY: canvas.height - 10
+};
 
 function drawCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -34,16 +41,33 @@ function drawCanvas() {
     window.requestAnimationFrame(drawCanvas);
 }
 
-var templateConfig = {
-rWidth: 30,
-rHeightMultiple: 10,
-wGap: 10
-};
+// Add music buffer to smooth the increment and decrement.
+var musicBuffer = [];
+var templateTime = new Date().getTime();
+function getMusicData() {
+    var _md = musicData;
+    if (musicBuffer.length < _md.length) {
+	for (i = 0; i < _md.length; i++) {
+	    musicBuffer[i] = _md[i];
+	}
+    } else {
+	var delta = 1;
+	var thresholdTime = 50;
+	var deltaTime = new Date().getTime() - templateTime;
+	if (deltaTime > thresholdTime) {
+	    templateTime = new Date().getTime();  // lazy, but beauty
+	    for (i = 0; i < _md.length; i++) {
+		var gap = _md[i] - musicBuffer[i];
+		if (gap != 0) {
+		    musicBuffer[i] += (gap > 0 ? 1 : -1) * delta;
+		}
+	    }
+	}
+    }
+    return musicBuffer;
+}
 
-var templatePosition = {
-startX: 10,
-startY: canvas.height - 10
-};
+
 
 // kick
 window.requestAnimationFrame(drawCanvas);

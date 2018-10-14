@@ -2,8 +2,8 @@
 console.log('include template1.js')
 
 var template1 = function() {
-    var dc = dataController();
-    var cc = canvasController(dc);
+    var dc = dataController1();
+    var cc = canvasController1(dc);
 
     var requestId = null;
     var iFading = null;
@@ -22,7 +22,7 @@ var template1 = function() {
     return this;
 };
 
-var dataController = function() {
+var dataController1 = function() {
     var musicData = [];
     var lastNoiseTimes = [];
     for (i = 0; i < 8; i++) {
@@ -94,7 +94,7 @@ var dataController = function() {
     return this;
 };
 
-var canvasController = function(dc) {
+var canvasController1 = function(dc) {
 
     var _dataController = dc;
     var canvas = document.getElementById('canvas');

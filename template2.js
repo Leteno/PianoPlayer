@@ -5,8 +5,8 @@ var template2 = function() {
 
     var requestId = null;
     var movingInterval = null;
-    var dc = dataController();
-    var cc = canvasController(dc);
+    var dc = dataController2();
+    var cc = canvasController2(dc);
 
     this.toneHit = function(tone) {
 	dc.onHitAtTone(tone);
@@ -22,7 +22,7 @@ var template2 = function() {
     return this;
 };
 
-var dataController = function() {
+var dataController2 = function() {
 
     var config = function() {
 	this.blockWidth = 10;
@@ -68,7 +68,7 @@ var dataController = function() {
     return this;
 };
 
-var canvasController = function(dc) {
+var canvasController2 = function(dc) {
     var dataController = dc;
     var canvas = document.getElementById('canvas');
     var config = function() {

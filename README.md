@@ -1,7 +1,7 @@
 
 # PianoPlayer
 
-Download it, and open index.html.
+You can play it by accessing [https://leteno.github.io/PianoPlayer/](https://leteno.github.io/PianoPlayer/)
 
 ![示例](example.png)
 
@@ -22,5 +22,5 @@ Download it, and open index.html.
 ## TODO
 - [ ] Add doh sound, I cannot find it.
 - [ ] Add more effects:
-	- [ ] make bar rolling from left to right;
+	- [x] make bar rolling from left to right;
 	- [ ] waving effects just like Microsoft Media Player

@@ -1,15 +1,32 @@
 <html>
-  <head><title>Enjoy it. Amigo</title></head>
+  <head>
+    <title>Enjoy it. Amigo</title>
+    <style>
+      th {
+      backgroud: #000;
+      }
+      td {
+      padding: 2px;
+      text-align: center;
+      }
+    </style>
+  </head>
   <body>
     <h1>Hello, Jia</h1>
-    <div style='text-align:right; width:350;'>
+    <div style='text-align:right; width:360;'>
       <select id='select'>
 	<option value='jumpingVol' selected='true'>Jumping Volumn</option>
 	<option value='scrollingVol' selected='true'>Scrolling Volumn</option>
 	<option value='other'>Other</option>
-	<select>
+      <select>
     </div>
-    <canvas id='canvas' width='550' height='200'></canvas>
+    <table border='1px' style='margin-top: 10px; '>
+      <tr><td><canvas id='canvas' width='350' height='200'></canvas></td></tr>
+    <table>
+    <table border='1px' style='margin-top: 20px; '>
+      <tr><th>Key</th> <td>A</td> <td>S</td> <td>D</td> <td>F</td> <td>J</td> <td>K</td> <td>L</td> <td>;</td> </tr>
+      <tr><th>Sound</th> <td>do</td> <td>re</td> <td>mi</td> <td>fa</td> <td>so</td> <td>la</td> <td>si</td> <td>doH</td> </tr>
+    </table>
 
     <audio id='do' src='assert/C5.mp3' autostart='false'></audio>
     <audio id='re' src='assert/D5.mp3' autostart='false'></audio>

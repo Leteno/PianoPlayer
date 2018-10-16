@@ -7,16 +7,15 @@ You can play it by accessing [https://leteno.github.io/PianoPlayer/](https://let
 
 ## Keymapping:
 
-|Key|sound|
-| :---: | :---: |
-|A|do|
-|S|re|
-|D|mi|
-|F|fa|
-|J|so|
-|K|la|
-|L|si|
-|;|doh|
+|Key|Sound|Key|Sound|Key|Sound|
+| :---: | :---: | :---: | :---: | :---: | :---: |
+|Q|doH|A|do|Z|doL|
+|W|reH|S|re|X|reL|
+|E|miH|D|mi|C|miL|
+|R|faH|F|fa|V|faL|
+|U|soH|J|so|M|soL|
+|I|laH|K|la|,|laL|
+|O|siH|L|si|.|siL|
 
 
 ## TODO

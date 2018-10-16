@@ -6,6 +6,7 @@
       backgroud: #000;
       }
       td {
+      width: 40px;
       padding: 2px;
       text-align: center;
       }
@@ -24,17 +25,41 @@
       <tr><td><canvas id='canvas' width='350' height='200'></canvas></td></tr>
     <table>
     <table border='1px' style='margin-top: 20px; '>
-      <tr><th>Key</th> <td>A</td> <td>S</td> <td>D</td> <td>F</td> <td>J</td> <td>K</td> <td>L</td> <td>;</td> </tr>
-      <tr><th>Sound</th> <td>do</td> <td>re</td> <td>mi</td> <td>fa</td> <td>so</td> <td>la</td> <td>si</td> <td>doH</td> </tr>
+      <tr><th>Key</th> <td>Q</td> <td>W</td> <td>E</td> <td>R</td> <td>U</td> <td>I</td> <td>O</td> </tr>
+      <tr><th>Sound</th> <td>doL</td> <td>reL</td> <td>miL</td> <td>faL</td> <td>soL</td> <td>laL</td> <td>siL</td> </tr>
+    </table>
+    <table border='1px' style='margin-top: 20px; '>
+      <tr><th>Key</th> <td>A</td> <td>S</td> <td>D</td> <td>F</td> <td>J</td> <td>K</td> <td>L</td> </tr>
+      <tr><th>Sound</th> <td>do</td> <td>re</td> <td>mi</td> <td>fa</td> <td>so</td> <td>la</td> <td>si</td> </tr>
+    </table>
+    <table border='1px' style='margin-top: 20px; '>
+      <tr><th>Key</th> <td>Z</td> <td>X</td> <td>C</td> <td>V</td> <td>M</td> <td>,</td> <td>.</td> </tr>
+      <tr><th>Sound</th> <td>doH</td> <td>reH</td> <td>miH</td> <td>faH</td> <td>soH</td> <td>laH</td> <td>siH</td> </tr>
     </table>
 
+    <audio id='laL' src='assert/A4.mp3' autostart='false'></audio>
+    <audio id='siL' src='assert/B4.mp3' autostart='false'></audio>
+    <audio id='doL' src='assert/C4.mp3' autostart='false'></audio>
+    <audio id='reL' src='assert/D4.mp3' autostart='false'></audio>
+    <audio id='miL' src='assert/E4.mp3' autostart='false'></audio>
+    <audio id='faL' src='assert/F4.mp3' autostart='false'></audio>
+    <audio id='soL' src='assert/G4.mp3' autostart='false'></audio>
+
+    <audio id='la' src='assert/A5.mp3' autostart='false'></audio>
+    <audio id='si' src='assert/B5.mp3' autostart='false'></audio>
     <audio id='do' src='assert/C5.mp3' autostart='false'></audio>
     <audio id='re' src='assert/D5.mp3' autostart='false'></audio>
     <audio id='mi' src='assert/E5.mp3' autostart='false'></audio>
     <audio id='fa' src='assert/F5.mp3' autostart='false'></audio>
     <audio id='so' src='assert/G5.mp3' autostart='false'></audio>
-    <audio id='la' src='assert/A5.mp3' autostart='false'></audio>
-    <audio id='si' src='assert/B5.mp3' autostart='false'></audio>
+
+    <audio id='laH' src='assert/A6.mp3' autostart='false'></audio>
+    <audio id='siH' src='assert/B6.mp3' autostart='false'></audio>
+    <audio id='doH' src='assert/C6.mp3' autostart='false'></audio>
+    <audio id='reH' src='assert/D6.mp3' autostart='false'></audio>
+    <audio id='miH' src='assert/E6.mp3' autostart='false'></audio>
+    <audio id='faH' src='assert/F6.mp3' autostart='false'></audio>
+    <audio id='soH' src='assert/G6.mp3' autostart='false'></audio>
 
   </body>
   <script src='audio.js'></script>

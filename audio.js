@@ -1,27 +1,15 @@
 
 console.log('include audio.js');
 
-function play(val) {
-    var n = Number(val);
-    switch(n) {
-    case 1:
-	playDo(); break;
-    case 2:
-	playRe(); break;
-    case 3:
-	playMi(); break;
-    case 4:
-	playFa(); break;
-    case 5:
-	playSo(); break;
-    case 6:
-	playLa(); break;
-    case 7:
-	playSi(); break;
-    case 8:
-    default:
-	playDoh(); break;
+var playingA = null;
+function play(tone) {
+    var audioElement = document.getElementById(tone);
+    if (playingA != null) {
+	playingA.pause();
+	playingA.currentTime = 0;
     }
+    audioElement.play();
+    playingA = audioElement;
 }
 
 var doA = document.getElementById("do");
@@ -31,8 +19,6 @@ var faA = document.getElementById("fa");
 var soA = document.getElementById("so");
 var laA = document.getElementById("la");
 var siA = document.getElementById("si");
-
-var playingA = null;
 
 function playDo() {
     console.log('do');

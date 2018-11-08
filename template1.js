@@ -1,9 +1,11 @@
 
 console.log('include template1.js')
 
-var template1 = function() {
-    var dc = dataController1();
-    var cc = canvasController1(dc);
+var TEMPLATE1 = {};
+
+TEMPLATE1.T = function(){
+    var dc = new TEMPLATE1.DataController();
+    var cc = new TEMPLATE1.CanvasController(dc);
 
     var requestId = null;
     var iFading = null;
@@ -22,7 +24,7 @@ var template1 = function() {
     return this;
 };
 
-var dataController1 = function() {
+TEMPLATE1.DataController = function() {
     var musicData = [];
     var lastNoiseTimes = [];
     for (i = 0; i < 8; i++) {
@@ -94,8 +96,9 @@ var dataController1 = function() {
     return this;
 };
 
-var canvasController1 = function(dc) {
+TEMPLATE1.CanvasController = function(dc) {
 
+    var that = this;
     var _dataController = dc;
     var canvas = document.getElementById('canvas');
 
@@ -137,7 +140,7 @@ var canvasController1 = function(dc) {
         ctx.closePath();
         ctx.fill();
 
-        requestId = window.requestAnimationFrame(drawCanvas);
+        requestId = window.requestAnimationFrame(that.drawCanvas);
     }
     return this;
 };

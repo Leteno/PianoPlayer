@@ -58,7 +58,7 @@ MAIN.prototype.init = function() {
     }
 
     var dict = {};
-    var t1 = new template1();
+    var t1 = new TEMPLATE1.T();
     dict['jumpingVol'] = template(t1.toneHit, t1.enable, t1.close);
     var t2 = new template2();
     dict['scrollingVol'] = template(t2.toneHit, t2.enable, t2.close);

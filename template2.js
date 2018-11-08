@@ -1,12 +1,14 @@
 
 console.log('include template2.js');
 
-var template2 = function() {
+var TEMPLATE2 = {}
+
+TEMPLATE2.T = function() {
 
     var requestId = null;
     var movingInterval = null;
-    var dc = dataController2();
-    var cc = canvasController2(dc);
+    var dc = TEMPLATE2.DataController();
+    var cc = TEMPLATE2.CanvasController(dc);
 
     this.toneHit = function(tone) {
 	dc.onHitAtTone(tone);
@@ -22,7 +24,7 @@ var template2 = function() {
     return this;
 };
 
-var dataController2 = function() {
+TEMPLATE2.DataController = function() {
 
     var config = function() {
 	this.blockWidth = 10;
@@ -68,7 +70,8 @@ var dataController2 = function() {
     return this;
 };
 
-var canvasController2 = function(dc) {
+TEMPLATE2.CanvasController = function(dc) {
+    var that = this;
     var dataController = dc;
     var canvas = document.getElementById('canvas');
     var config = function() {
@@ -97,7 +100,7 @@ var canvasController2 = function(dc) {
 	ctx.closePath();
 	ctx.fill();
 
-	requestId = window.requestAnimationFrame(draw);
+	requestId = window.requestAnimationFrame(that.draw);
     };
     return this;
 };
